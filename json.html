@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>ATIVIDADE JSON</h2>
+
+<p id="demo"></p>
+
+<script>
+
+var myObj, myJSON, text, obj;
+
+
+myObj = { name: "Gabrielle", idade: 20, ra: 918114244 };
+myJSON = JSON.stringify(myObj);
+localStorage.setItem("aluna", myJSON);
+
+
+text = localStorage.getItem("aluna");
+obj = JSON.parse(text);
+document.getElementById("demo").innerHTML = "NOME: "+obj.name+"<br>Idade: "+obj.idade+"<br>Ra:"+obj.ra;
+</script>
+
+</body>
+</html>
